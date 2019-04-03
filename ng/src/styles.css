@@ -1,0 +1,119 @@
+
+body {
+    overflow-x: hidden;
+    
+}
+
+
+.jobs .btn{
+    color: #492365;
+    border: 1px solid #492365;
+}
+
+.jobs .btn:hover{
+    background-color: #492365;
+    color: #fff;
+}
+
+.form-group .btn{
+    background-color: transparent;
+    color: #492365;
+    border: 1px solid #492365;
+}
+
+.form-group .btn:hover{
+    background-color: #492365;
+    color: #fff;
+}
+
+.row {
+    padding: 30px;
+}
+
+.row2 {
+    padding: 0;
+}
+
+.banner {
+    background-image: url('./assets/weber-state-u-990x350.jpg');
+    background-size: cover;
+    height: 300px;
+}
+
+
+.colorBar {
+    background-color: #492365;
+    color: #aa989c;
+    height: 250px;
+    padding-top: 70px;
+    
+}
+
+.colorBar a{
+    color: #aa989c;
+    text-decoration: none;
+}
+
+.colorBar a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.colorBar2 {
+    background-color: #492365;
+    color: white;
+    height: 400px;
+    padding-top: 70px;
+}
+
+/*
+.colorBar i {
+    font-size: 48px;
+}*/
+
+.underline {
+    border-bottom: #492365 1px solid;
+}
+
+.underline2 {
+    border-bottom: white 1px solid;
+}
+
+.sections {
+    height: 500px;
+}
+
+.employer {
+    background-image: linear-gradient(rgba(51, 51, 51, .6), rgba(51, 51, 51, .6)), url('./assets/business-3152586_640.jpg');
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+footer{
+    background-color: #575047;
+    color: #fff;
+}
+
+.top{
+    background-color: #575047;
+    color: #fff;
+   height: 50px;
+    
+}
+.top a{
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.top p{
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+}
+
+
+/* 5006b37ffa010fdddb9b66adbfb532ba793f6bad */
