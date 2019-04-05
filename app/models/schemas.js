@@ -125,7 +125,9 @@ let userSchema = new Schema({
     pay:{type: String, required: true},
     posted_at: Date,
     updated_at: Date,
-    body: {type: String, required: true}
+    body: {type: String, required: true},
+    URL: String,
+    location: String
 })
 
 jobsSchema.pre('save', function(next){

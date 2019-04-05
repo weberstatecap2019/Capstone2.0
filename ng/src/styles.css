@@ -12,7 +12,11 @@ body {
 
 .jobs .btn:hover{
     background-color: #492365;
-    color: #fff;
+    color: #fff !important;
+}
+
+form .row{
+    padding: 0;
 }
 
 .form-group .btn{
@@ -103,6 +107,11 @@ footer{
    height: 50px;
     
 }
+
+.top ul li{
+    display: inline-block;
+}
+
 .top a{
     color: #fff;
     font-size: 12px;

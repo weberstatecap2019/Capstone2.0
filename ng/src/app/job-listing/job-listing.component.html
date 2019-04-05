@@ -8,29 +8,32 @@
 <br>
 <div class="container jobs">
   
-<div class="row">
+<div class="row"> 
     <div class="col-3"></div>
     <div class=" pad-left col-4">
         <div >
-         <h4>Title:</h4>
-          <p>Web UX Designer</p>
+         <h4>Title: </h4>
+          <p>{{job.title}}</p>
           <h4>Company:</h4>
-          <p>Bob Ross</p>
+          <p>{{job.company.name}}</p>
+          <h4>Pay:</h4>
+          <p>{{job.pay}}</p>
           <h4>Location:</h4>
-          <p>Weber State</p>
+          <p>{{job.location}}</p>
          </div>
     </div>
     <div class="col-3 jobpic">
         
         <h4>Description:</h4>
-        <p>This is a programming job, you better know how to program you fool. Also, design is a plus.</p>
-        <h4>Date Posted</h4>
-        <p>March 10, 2019</p>
+        <p>{{job.body}}</p> 
+       <h4>Date Posted</h4>
+        <p>{{job.posted_at}}</p>
            </div>
 </div>    
 <div class="row">
   <div class="col-sm-12 text-center">
-      <button type="button" class="btn cent btn-outline-secondary">Apply Now</button> 
+      <a  href={{job.URL}} target="_blank"class="btn cent btn-outline-secondary">APPLY NOW</a>
+
   </div>
 </div>
 

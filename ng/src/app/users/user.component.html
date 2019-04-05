@@ -1,0 +1,27 @@
+<nav class="navbar top ">
+    <ul class="navbar-nav ml-auto">
+        <ng-template [ngIf]="notLoggedIn">
+            <li class="nav-item">
+                <a href="/register" class="nav-link">Register</a>
+            </li>
+            <li class="nav-item">
+                <a href="/login" class="nav-link">Login</a>
+            </li>
+        </ng-template>
+        <li class="nav-item" *ngIf="loggedIn">
+            <a  class="nav-link" (click)="logout()">Logout</a>
+        </li>
+    </ul>
+  </nav> 
+
+  <!-- <ng-template [ngIf]="notLoggedIn">
+    <li class="nav-item">
+        <a href="/register" class="nav-link">Register</a>
+    </li>
+    <li class="nav-item">
+        <a href="/login" class="nav-link">Login</a>
+    </li>
+</ng-template>
+<li class="nav-item" *ngIf="loggedIn">
+    <a  class="nav-link" (click)="logout()">Logout</a>
+</li> -->

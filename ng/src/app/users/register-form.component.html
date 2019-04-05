@@ -1,67 +1,76 @@
-<h2>Register</h2>
-<p>
-        If you dont have an account, please go here to <a routerLink="/login" class="btn btn-primary">login</a> 
-       </p>
+<div class="row">
+        <h2 class="text-center col-12">
+           <span class="underline">Register</span>
+        </h2>
+        <br>
+        <br>
+        <br>
+        <div class="text-center col-3"></div>
+        <div class="text-center col-6">
 <form #f="ngForm" (ngSubmit)=" onSubmit(f)" [ngClass]="{'was-validated' : !f.valid && !f.pristine}">
 
     <div class="form-group row">
-        <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
-        <div class="col-sm-10">
-            <input type="text" required minlength="10" class="form-control" name="firstName" id="firstName"
+        <label for="firstName" class="col-sm-2 col-form-label"></label>
+       
+            <input placeholder="First Name" type="text" required minlength="10" class="form-control" name="firstName" id="firstName"
                 [(ngModel)]="user.firstName" #firstName="ngModel">
             <div class="invalid-feedback" [hidden]="firstName.valid || firstName.pristine">
                 please add first Name
-            </div>
-        </div>
+           </div>
     </div>
 
     <div class="form-group row">
-        <label for="LastName" class="col-sm-2 col-form-label">Last Name</label>
-        <div class="col-sm-10">
-            <input type="text" required minlength="10" class="form-control" name="LastName" id="LastName"
+        <label for="LastName" class="col-sm-2 col-form-label"></label>
+
+            <input placeholder="Last Name" type="text" required minlength="10" class="form-control" name="LastName" id="LastName"
                 [(ngModel)]="user.LastName" #LastName="ngModel">
             <div class="invalid-feedback" [hidden]="LastName.valid || LastName.pristine">
                 please add Last Name
             </div>
-        </div>
+        
     </div>
 
 
     <div class="form-group row">
-        <label for="username" class="col-sm-2 col-form-label">Username</label>
-        <div class="col-sm-10">
-            <input type="text" required minlength="5" maxlength="60" class="form-control" name="username" id="username"
+        <label for="username" class="col-sm-2 col-form-label"></label>
+       
+            <input placeholder="User Name" type="text" required minlength="5" maxlength="60" class="form-control" name="username" id="username"
                 [(ngModel)]="user.username" #username="ngModel">
             <div class="invalid-feedback" [hidden]="username.valid || username.pristine">
                 please add a username
-            </div>
+         
         </div>
     </div>
     <div class="form-group row">
-        <label for="email" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-            <input type="email" required minlength="10" class="form-control" name="email" id="email"
+        <label for="email" class="col-sm-2 col-form-label"></label>
+       
+            <input placeholder="Email" type="email" required minlength="10" class="form-control" name="email" id="email"
                 [(ngModel)]="user.email" #email="ngModel">
             <div class="invalid-feedback" [hidden]="email.valid || email.pristine">
                 please add an email
             </div>
-        </div>
+        
     </div>
     <div class="form-group row">
-        <label for="password" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-            <input type="password" required minlength="10" class="form-control" name="password" id="password"
+        <label for="password" class="col-sm-2 col-form-label"></label>
+       
+            <input placeholder="Password" type="password" required minlength="10" class="form-control" name="password" id="password"
                 [(ngModel)]="user.password" #password="ngModel">
             <div class="invalid-feedback" [hidden]="password.valid || password.pristine">
                 please add a password
             </div>
-        </div>
+      
     </div>
     <div class="form-group row">
-        <label for="" class="col-sm-2 col-form-label"></label>
-        <div class="col-sm-10">
+                   
+            <div class="col-sm-12 text-center">
             <button type="submit" class="btn btn-primary">Submit</button> &nbsp;
-            <button class="btn btn-danger" routerLink="/books">Cancel</button>
-        </div>
-    </div>
+            <button class="btn btn-danger" routerLink="/home">Cancel</button>&nbsp;
+            <button type="submit" routerLink="/login" class="btn btn-primary">Login</button> &nbsp;
+
+            </div>
+          </div>
 </form>
+</div>
+</div>
+

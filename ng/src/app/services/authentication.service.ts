@@ -13,8 +13,14 @@ const httpHeaders = {
   providedIn: 'root'
 })
 export class AuthenticationService {
+  
 
 constructor(private http : HttpClient){}
+
+static isAuthenticated(): boolean{
+  return localStorage.getItem('auth-token') !== null
+}
+
 
   register(user: User): any {
   //todo 

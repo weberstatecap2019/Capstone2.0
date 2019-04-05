@@ -7,6 +7,14 @@ import { QuestionForumComponent } from './question-forum/question-forum.componen
 import { JobListingComponent } from './job-listing/job-listing.component';
 import { EmployerComponent } from './employer/employer.component';
 import { HomeComponent } from './home/home.component';
+import { UserComponent } from './users/user.component';
+import { AuthenticationGaurd } from './services/authentication.guard';
+import { LoginFormComponent } from './users/login-form.component';
+import { RegisterFormComponent } from './users/register-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,13 +22,19 @@ import { HomeComponent } from './home/home.component';
     QuestionForumComponent,
     JobListingComponent,
     EmployerComponent,
-    HomeComponent
+    HomeComponent,
+    UserComponent,
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthenticationGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

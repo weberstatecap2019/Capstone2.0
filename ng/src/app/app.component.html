@@ -1,12 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <!--   <div class="container-fluid">-->
-    
-    <nav class="navbar top ">
-        <span class="navbar-text">
-            <p>This is a test | <a href="">Login</a></p>
-          </span>
-      </nav> 
+    <header>
+   <auth-el></auth-el>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
    
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,17 +29,20 @@
           </span>
         </div>
       </nav>
+    </header>
    
    <div class="banner"></div>
    
    <div class="colorBar text-center row2">
        <div class="row acitve">
+        
             <div class="col-sm-4">
                 <a  routerLink="/home/employer" routerLinkActive="active">
                 <i class="fas fa-handshake fa-3x"></i>
                 <p>Employer</p>
                 </a>
             </div>
+    
             <div class="col-sm-4">
                 <a routerLink="/home/job_listing" routerLinkActive="active">
                 <i class="fas fa-clipboard-check fa-3x"></i>
@@ -67,6 +66,5 @@
     
     
 <!--</div>-->
-
 
 <router-outlet></router-outlet>

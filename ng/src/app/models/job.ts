@@ -6,4 +6,6 @@ pay: string
 posted_at: Date
 updated_at: Date
 body: string
+URL: string
+location: string
 }
