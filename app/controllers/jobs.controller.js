@@ -1,10 +1,10 @@
 import express from 'express'
-import { Jobs } from '../models/schemas'
+import { Job } from '../models/schemas'
 let router = express.Router()
 
 /* GET / */
 router.get('/api/jobs', function (req, res, next) {
-    Jobs.find().exec((err, jobs) => {
+    Job.find().exec((err, jobs) => {
         if (err) {
             res.json({ success: false, message: 'Failed query' })
         } else {
@@ -16,7 +16,7 @@ router.get('/api/jobs', function (req, res, next) {
 })
 
 router.post('/api/jobs/create', function (req, res, next) {
-    new Jobs(req.body).save(err => {
+    new Job(req.body).save(err => {
         if (err) {
             res.json({ success: false, message: 'unable to save job' })
         } else {
@@ -26,7 +26,7 @@ router.post('/api/jobs/create', function (req, res, next) {
 })
 
 router.get('/api/jobs/:id', function (req, res, next) {
-    Jobs.findById(req.params.id, (err, job) => {
+    Job.findById(req.params.id, (err, job) => {
         if (err) {
             res.json({ success: false, message: 'Failed query' })
         } else {
@@ -57,7 +57,7 @@ router.put('/api/jobs/:id/update', function (req, res, next) {
 })
 
 router.delete('/api/projects/:id/delete', function (req, res, next) {
-    Project.findByIdAndRemove(req.params.id, (err) => {
+    Job.findByIdAndRemove(req.params.id, (err) => {
         if (err) {
             res.json({ success: false, message: 'Failed to delete or project is not found' })
         } else {

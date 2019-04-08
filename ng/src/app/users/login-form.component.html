@@ -1,6 +1,6 @@
 <div class="row">
     <h2 class="text-center col-12">
-       <span class="underline">Register</span>
+       <span class="underline">Login</span>
     </h2>
     <br>
     <br>
@@ -12,7 +12,7 @@
           
           <!-- <label for="username" class="col-sm-2 col-form-label" >Username</label> -->
         
-            <input placeholder="username" type="text" required minlength="5" maxlength="60"  class="form-control" name="username" id="username" [(ngModel)]="user.username" #username="ngModel">
+            <input placeholder="username" type="text" required minlength="1" maxlength="1"  class="form-control" name="username" id="username" [(ngModel)]="user.username" #username="ngModel">
           <div class="invalid-feedback" [hidden]="username.valid || username.pristine">
             please add a username
           </div>
@@ -23,7 +23,7 @@
             <!-- <label for="password" class="col-sm-2 col-form-label" >Password</label> -->
            
          
-              <input placeholder="password" type="password" required minlength="10" class="form-control" name="password" id="password" [(ngModel)]="user.password" #password="ngModel">
+              <input placeholder="password" type="password" required minlength="1" class="form-control" name="password" id="password" [(ngModel)]="user.password" #password="ngModel">
               <div class="invalid-feedback" [hidden]="password.valid || password.pristine">
                 please add a password
               </div>

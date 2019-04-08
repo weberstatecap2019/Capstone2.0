@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Jobs } from '../models/job';
+import { Job } from '../models/job';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httpHeaders = {
@@ -10,25 +10,25 @@ const httpHeaders = {
 @Injectable({
   providedIn: 'root'
 })
-export class BooksService {
+export class JobsService {
   constructor(private http : HttpClient){}
-  getJob(id: string): Observable<Jobs> {
-    return this.http.get<Jobs>(`http://localhost:8080/api/jobs/${id}`, httpHeaders)
+  getJob(id: string): Observable<Job> {
+    return this.http.get<Job>(`http://localhost:8080/api/jobs/${id}`, httpHeaders)
   }
 
-  getJobs(): Observable<Jobs[]> {
-    return this.http.get<Jobs[]>('http://localhost:8080/api/jobs', httpHeaders)
+  getJobs(): Observable<Job[]> {
+    return this.http.get<Job[]>('http://localhost:8080/api/jobs', httpHeaders)
   }
 
-  createJob(job: Jobs): any {
-    return this.http.post<Jobs>('http://localhost:8080/api/jobs/create', job, httpHeaders)
+  createJob(job: Job): any {
+    return this.http.post<Job>('http://localhost:8080/api/jobs/create', job, httpHeaders)
   }
 
-  updateJob(job: Jobs): any {
-    return this.http.put<Jobs>(`http://localhost:8080/api/jobs/${job._id}/update`, job, httpHeaders)
+  updateJob(job: Job): any {
+    return this.http.put<Job>(`http://localhost:8080/api/jobs/${job._id}/update`, job, httpHeaders)
   }
 
-  deleteJob(job: Jobs): any {
-    return this.http.delete<Jobs>(`http://localhost:8080/api/jobs/${job._id}/delete`, httpHeaders)
+  deleteJob(job: Job): any {
+    return this.http.delete<Job>(`http://localhost:8080/api/jobs/${job._id}/delete`, httpHeaders)
   }
 }

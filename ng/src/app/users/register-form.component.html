@@ -12,7 +12,7 @@
     <div class="form-group row">
         <label for="firstName" class="col-sm-2 col-form-label"></label>
        
-            <input placeholder="First Name" type="text" required minlength="10" class="form-control" name="firstName" id="firstName"
+            <input placeholder="First Name" type="text" required minlength="1" class="form-control" name="firstName" id="firstName"
                 [(ngModel)]="user.firstName" #firstName="ngModel">
             <div class="invalid-feedback" [hidden]="firstName.valid || firstName.pristine">
                 please add first Name
@@ -22,7 +22,7 @@
     <div class="form-group row">
         <label for="LastName" class="col-sm-2 col-form-label"></label>
 
-            <input placeholder="Last Name" type="text" required minlength="10" class="form-control" name="LastName" id="LastName"
+            <input placeholder="Last Name" type="text" required minlength="1" class="form-control" name="LastName" id="LastName"
                 [(ngModel)]="user.LastName" #LastName="ngModel">
             <div class="invalid-feedback" [hidden]="LastName.valid || LastName.pristine">
                 please add Last Name
@@ -34,7 +34,7 @@
     <div class="form-group row">
         <label for="username" class="col-sm-2 col-form-label"></label>
        
-            <input placeholder="User Name" type="text" required minlength="5" maxlength="60" class="form-control" name="username" id="username"
+            <input placeholder="User Name" type="text" required minlength="1" maxlength="60" class="form-control" name="username" id="username"
                 [(ngModel)]="user.username" #username="ngModel">
             <div class="invalid-feedback" [hidden]="username.valid || username.pristine">
                 please add a username
@@ -44,7 +44,7 @@
     <div class="form-group row">
         <label for="email" class="col-sm-2 col-form-label"></label>
        
-            <input placeholder="Email" type="email" required minlength="10" class="form-control" name="email" id="email"
+            <input placeholder="Email" type="email" class="form-control" name="email" id="email"
                 [(ngModel)]="user.email" #email="ngModel">
             <div class="invalid-feedback" [hidden]="email.valid || email.pristine">
                 please add an email
@@ -54,7 +54,7 @@
     <div class="form-group row">
         <label for="password" class="col-sm-2 col-form-label"></label>
        
-            <input placeholder="Password" type="password" required minlength="10" class="form-control" name="password" id="password"
+            <input placeholder="Password" type="password" required minlength="1" class="form-control" name="password" id="password"
                 [(ngModel)]="user.password" #password="ngModel">
             <div class="invalid-feedback" [hidden]="password.valid || password.pristine">
                 please add a password
@@ -66,7 +66,7 @@
             <div class="col-sm-12 text-center">
             <button type="submit" class="btn btn-primary">Submit</button> &nbsp;
             <button class="btn btn-danger" routerLink="/home">Cancel</button>&nbsp;
-            <button type="submit" routerLink="/login" class="btn btn-primary">Login</button> &nbsp;
+            <button  routerLink="/login" class="btn btn-primary">Login</button> &nbsp;
 
             </div>
           </div>

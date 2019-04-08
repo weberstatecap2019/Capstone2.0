@@ -1,11 +1,11 @@
-export class Jobs {
+export class Job{
 _id: string
 title: string
+description: string
 company_name: string
 pay: string
-posted_at: Date
-updated_at: Date
-body: string
+type: string
 URL: string
 location: string
 }
+

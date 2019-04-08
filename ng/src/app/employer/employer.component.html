@@ -1,4 +1,4 @@
-
+<!-- 
   <div class="row">
      <h2 class="text-center col-12">
         <span class="underline">Employer Application</span>
@@ -37,6 +37,87 @@
            </div>
         </form>
      </div>
+  </div> -->
+
+  <h2>Employer Application</h2>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [ngClass]="{'was-validated': !f.valid && !f.pristine}">
+  <div class="form-group row">
+    <label for="etitle" class="col-sm-2 col-form-label">Title</label>
+    <div class="col-sm-10">
+      <input type="text" required minlength="5" maxlength="60" class="form-control" name="title" id="etitle" [(ngModel)]="job.title" #title="ngModel">
+      <div class="invalid-feedback" [hidden]="title.valid || title.pristine">
+        Please enter a title.
+      </div>
+    </div>
   </div>
+  <div class="form-group row">
+    <label for="ecompany_name" class="col-sm-2 col-form-label">Company Name</label>
+    <div class="col-sm-10">
+      <input type="text" required class="form-control" name="company_name" id="ecompany_name" [(ngModel)]="job.company_name" #author="ngModel">
+      <div class="invalid-feedback" [hidden]="company_name.valid || company_name.pristine">
+        Please ener an author.
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="elocation" class="col-sm-2 col-form-label">Location</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="Location" id="elocation" [(ngModel)]="job.location" >
+      <div class="invalid-feedback" >
+        Please enter a valid URL for the poster.
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="etype" class="col-sm-2 col-form-label">Type</label>
+    <div class="col-sm-10">
+      <input type="text" required class="form-control" name="type" id="etype"  [(ngModel)]="job.type" #isbn="ngModel">
+      <div class="invalid-feedback" [hidden]="type.valid || type.pristine">
+        Please enter an isbn
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="edescription" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <textarea name="description" required id="edescription" cols="30" rows="10" class="form-control" [(ngModel)]="job.description" #synopsis="ngModel"></textarea>
+      <div class="invalid-feedback" [hidden]="description.valid || description.pristine">
+        Please enter a synopsis.
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+   <label for="epay" class="col-sm-2 col-form-label">Pay</label>
+   <div class="col-sm-10">
+      <input type="text" required minlength="5" maxlength="60" class="form-control" name="pay" id="epay" [(ngModel)]="job.pay" #title="ngModel">
+     <div class="invalid-feedback" [hidden]="pay.valid || pay.pristine">
+       Please enter a synopsis.
+     </div>
+   </div>
+ </div>
+ <div class="form-group row">
+   <label for="eURL" class="col-sm-2 col-form-label">Link to job</label>
+   <div class="col-sm-10">
+      <input type="text" required minlength="5" maxlength="60" class="form-control" name="URL" id="eURL" [(ngModel)]="job.URL" #title="ngModel">
+     <div class="invalid-feedback" [hidden]="URL.valid || URL.pristine">
+       Please enter a synopsis.
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+
+
+  <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label"></label>
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+        <button class="btn btn-secondary" routerLink="/home">Cancel</button>
+      </div>
+    </div>
+</form>
 
  
