@@ -24,24 +24,26 @@ export class EmployerComponent implements OnInit {
 
   onSubmit(f: NgForm){
     if(f.valid){
-      if(this.job._id === undefined){
+      if(true){
         this.jobsService.createJob(this.job).subscribe(res => {
           this.job = res
-          this.toastr.success("The book was successfully created.")
+          this.toastr.success("The job was successfully created.")
+          console.log(this.job)
         })
       }else{
         this.jobsService.updateJob(this.job).subscribe(res => {
           this.job = res
-          this.toastr.success("The book was successfully updated.")
+          this.toastr.success("The job was successfully updated.")
+          console.log(this.job)
         })
       }
 
-      this.router.navigate(['/home'])
-    } else {
-      for(let c in f.controls){
-        f.controls[c].markAsDirty()
-      }
-    }
+      //this.router.navigate(['/home'])
+     } // } else {
+    //   for(let c in f.controls){
+    //     f.controls[c].markAsDirty()
+    //   }
+    // }
   }
 
 }

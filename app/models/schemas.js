@@ -13,11 +13,7 @@ let jobsSchema = new Schema({
     location: String,
 })
 
-let blogSchema = new Schema({
-    author: String,
-    date: String,
-    message: String
-})
+
 
 let userSchema = new Schema({
   username: {
@@ -62,7 +58,7 @@ userSchema.methods.generateJwt = function() {
 }
 
 export let Job = mongoose.model("Jobs", jobsSchema)
-export let Blog = mongoose.model("Blog", blogSchema)
+
 export let User = mongoose.model("User", userSchema)
 
 // //TODO
