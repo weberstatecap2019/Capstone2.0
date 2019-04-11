@@ -17,6 +17,7 @@ router.get('/api/jobs', function (req, res, next) {
 
 router.post('/api/jobs/create', function (req, res, next) {
     new Job(req.body).save(err => {
+        console.log("test")
         if (err) {
             res.json({ success: false, message: 'unable to save job' })
         } else {

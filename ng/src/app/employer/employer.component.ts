@@ -21,29 +21,34 @@ export class EmployerComponent implements OnInit {
       this.jobsService.getJob(bid).subscribe( orig => Object.assign(this.job, orig))
     }
   }
+  onCreate(job: Job): void {
+    this.jobsService.createJob(job).subscribe(res => {
+      console.log(job);
+    });
+  }
 
-  onSubmit(f: NgForm){
-    if(f.valid){
-      if(true){
-        this.jobsService.createJob(this.job).subscribe(res => {
-          this.job = res
-          this.toastr.success("The job was successfully created.")
-          console.log(this.job)
-        })
-      }else{
-        this.jobsService.updateJob(this.job).subscribe(res => {
-          this.job = res
-          this.toastr.success("The job was successfully updated.")
-          console.log(this.job)
-        })
-      }
+  // onSubmit(f: NgForm){
+  //   if(f.valid){
+  //     if(true){
+  //       this.jobsService.createJob(this.job).subscribe(res => {
+  //         this.job = res
+  //         this.toastr.success("The job was successfully created.")
+  //         console.log(this.job)
+  //       })
+  //     }else{
+  //       this.jobsService.updateJob(this.job).subscribe(res => {
+  //         this.job = res
+  //         this.toastr.success("The job was successfully updated.")
+  //         console.log(this.job)
+  //       })
+  //     }
 
       //this.router.navigate(['/home'])
-     } // } else {
+     // } else {
     //   for(let c in f.controls){
     //     f.controls[c].markAsDirty()
     //   }
     // }
-  }
+  //}
 
 }
