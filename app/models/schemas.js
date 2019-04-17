@@ -12,14 +12,6 @@ let jobsSchema = new Schema({
     URL: String,
     location: String,
 })
-jobsSchema.pre('save', function(next){
-    if(this.isNew){
-        this.posted_at = new Date();
-    }
-    next();
-});
-
-
 
 let userSchema = new Schema({
   username: {
