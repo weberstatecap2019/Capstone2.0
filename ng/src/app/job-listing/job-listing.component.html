@@ -1,3 +1,14 @@
+<div class="sections text-center ">
+  <h2> <span class="underline"> Jobs</span></h2>
+  <div class="container-fluid">
+   <div class="col-sm-12 text-center">
+        <jobs-el *ngFor="let job of jobs" [job]="job"></jobs-el>
+    </div>
+    </div>
+  
+    
+</div>
+
 <div class="row">
   <h2 class="text-center col-12">
       <span class="underline">Most Recent Job Posts</span>
@@ -25,7 +36,7 @@
     <div class="col-3 jobpic">
         
         <h4>Description:</h4>
-        <p>{{job.body}}</p> 
+        <p>{{job.description}}</p> 
        <h4>Date Posted</h4>
         <p>{{job.type}}</p>
            </div>

@@ -6,7 +6,7 @@ let router = express.Router()
 router.get('/api/jobs', function (req, res, next) {
     Job.find().exec((err, jobs) => {
         if (err) {
-            res.json({ success: false, message: 'Failed query' })
+            res.json({ success: false, message: `Failed with error ${err}` })
         } else {
             res.write(JSON.stringify(jobs))
             res.end()
@@ -17,9 +17,13 @@ router.get('/api/jobs', function (req, res, next) {
 
 router.post('/api/jobs/create', function (req, res, next) {
     new Job(req.body).save(err => {
+        //console.log("Controller: Did I make it here")
         if (err) {
-            res.json({ success: false, message: 'unable to save job' })
+            console.log(err)
+            res.json({ success: false, message: 'Honestly, We have no idea what happened to your job' })
         } else {
+            //res.redirect(301, "/home/employer/");
+            res.redirect(req.get('referer'));
             res.end()
         }
     })

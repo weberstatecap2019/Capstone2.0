@@ -1,8 +1,29 @@
 <div class="sections text-center ">
-    <h2> <span class="underline"> Jobs</span></h2>
+    <h2> <span class="underline">Jobs</span></h2>
     <div class="container-fluid">
      <div class="col-sm-12 text-center">
-          <jobs-el *ngFor="let job of jobs" [job]="job"></jobs-el>
+          <!-- <jobs-el *ngFor="let job of jobs" [job]="job"></jobs-el> -->
+          <div class="row" *ngFor="let job of jobs">
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                  <h1>Title:</h1>
+                  <p>{{ job.title }}</p>
+                  <h1>Description</h1>
+                  <p>{{ job.description }}</p>
+                  <h1>Company Name:</h1>
+                  <p>{{ job.company_name }}</p>
+                  <h1>Pay:</h1>
+                  <p>{{ job.pay }}</p>
+                  <h1>Type</h1>
+                  <p>{{ job.type }}</p>
+                  <h1>URL</h1>
+                  <p>{{ job.URL }}</p>
+                  <h1>Location</h1>
+                  <p>{{ job.location }}</p>
+              </div>
+              <div class="col-sm-4"></div>
+
+          </div>
       </div>
       </div>
     
