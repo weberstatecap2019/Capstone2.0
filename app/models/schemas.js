@@ -13,8 +13,6 @@ let jobsSchema = new Schema({
     location: String,
 })
 
-
-
 let userSchema = new Schema({
   username: {
     type: String,

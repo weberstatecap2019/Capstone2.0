@@ -16,11 +16,12 @@ export class JobsService {
     return this.http.get<Job>(`http://localhost:8080/api/jobs/${id}`, httpHeaders)
   }
 
-  getJobs(): Observable<Job[]> {
-    return this.http.get<Job[]>('http://localhost:8080/api/jobs', httpHeaders)
+  getJobs(): Observable<Array<Job>> {
+    return this.http.get<Array<Job>>('http://localhost:8080/api/jobs', httpHeaders)
   }
 
-  createJob(job: Job): any {
+  createJob(job: Job): Observable<any> {
+    console.log('Service call:', job)
     return this.http.post<Job>('http://localhost:8080/api/jobs/create', job, httpHeaders)
   }
 

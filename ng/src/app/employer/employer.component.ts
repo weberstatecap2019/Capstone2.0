@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Job } from '../models/job';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JobsService } from '../services/jobs.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { EventEmitter } from 'events';
 
 @Component({
   templateUrl: './employer.component.html',
@@ -11,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class EmployerComponent implements OnInit {
   job: Job = new Job()
+  //@Output() createJob= new EventEmitter<Job>();
   constructor(private jobsService: JobsService, 
     private route : ActivatedRoute, 
     private router : Router, private toastr : ToastrService) { }
@@ -23,7 +25,8 @@ export class EmployerComponent implements OnInit {
   }
   onCreate(job: Job): void {
     this.jobsService.createJob(job).subscribe(res => {
-      console.log(job);
+      console.log(job)
+      //this.createJob.emit(job);
     });
   }
 
