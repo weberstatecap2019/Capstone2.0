@@ -12,7 +12,7 @@
           
           <!-- <label for="username" class="col-sm-2 col-form-label" >Username</label> -->
         
-            <input placeholder="username" type="text" required minlength="1" maxlength="1"  class="form-control" name="username" id="username" [(ngModel)]="user.username" #username="ngModel">
+            <input placeholder="username" type="text" required minlength="1" maxlength="10"  class="form-control" name="username" id="username" [(ngModel)]="user.username" #username="ngModel">
           <div class="invalid-feedback" [hidden]="username.valid || username.pristine">
             please add a username
           </div>
