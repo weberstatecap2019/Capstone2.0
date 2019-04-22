@@ -99,6 +99,7 @@ form .row{
 footer{
     background-color: #575047;
     color: #fff;
+    position: relative;
 }
 
 .top{

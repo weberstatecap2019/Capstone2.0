@@ -26,6 +26,7 @@ export class EmployerComponent implements OnInit {
   onCreate(job: Job): void {
     this.jobsService.createJob(job).subscribe(res => {
       console.log(job)
+   
       //this.createJob.emit(job);
     });
   }
