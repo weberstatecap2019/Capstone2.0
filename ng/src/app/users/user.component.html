@@ -1,13 +1,16 @@
 <nav class="navbar top ">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto" style="display: inline; margin-right: 20px;">
         <ng-template [ngIf]="notLoggedIn">
             <li class="nav-item">
-                <a href="/register" class="nav-link">Register</a>
+                <a href="/register" class="nav-link">Register</a> &nbsp; | &nbsp;
             </li>
             <li class="nav-item">
                 <a href="/login" class="nav-link">Login</a>
             </li>
         </ng-template>
+        <li class="nav-item" *ngIf="loggedIn">
+            Welcome! &nbsp; | &nbsp;
+        </li>
         <li class="nav-item" *ngIf="loggedIn">
             <a  class="nav-link" (click)="logout()">Logout</a>
         </li>
