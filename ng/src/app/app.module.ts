@@ -15,6 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { JobsComponent } from './job-listing/job-listings.component';
 import { JobComponent } from './job-listing/job-listing.component';
+import { QuestionFormComponent } from './question-forum/question-form.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { JobComponent } from './job-listing/job-listing.component';
     UserComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    JobsComponent
+    JobsComponent,
+    QuestionFormComponent
   ],
   imports: [
     BrowserModule,

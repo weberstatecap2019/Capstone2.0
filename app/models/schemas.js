@@ -3,6 +3,13 @@ import crypto from 'crypto'
 import {getSignedAuthenticationToken } from "../helpers/require_login"
 const Schema = mongoose.Schema
 
+let postForumSchema = new Schema({
+  title: String,
+  question: String,
+  class: String,
+  image: String,
+})
+
 let jobsSchema = new Schema({
     title: String,
     description: String,
@@ -56,7 +63,7 @@ userSchema.methods.generateJwt = function() {
 }
 
 export let Job = mongoose.model("Jobs", jobsSchema)
-
+export let PostForum = mongoose.model("PostForum", postForumSchema)
 export let User = mongoose.model("User", userSchema)
 
 // //TODO

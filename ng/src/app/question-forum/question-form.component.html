@@ -1,0 +1,49 @@
+<h2>Employer Application</h2>
+<form>
+  <div class="form-group row">
+    <label for="qtitle" class="col-sm-2 col-form-label">Question</label>
+    <div class="col-sm-10">
+      <input type="text" required minlength="5" maxlength="60" class="form-control" name="title" id="qtitle" [(ngModel)]="question.title" #title="ngModel">
+      <!-- <div class="invalid-feedback" [hidden]="title.valid || title.pristine">
+        Please enter a title.
+      </div> -->
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="qquestion" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <input type="text" required class="form-control" name="question" id="qquestion" [(ngModel)]="question.question" #question="ngModel">
+      <!-- <div class="invalid-feedback" [hidden]="company_name.valid || company_name.pristine">
+        Please ener an author.
+      </div> -->
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="qclass" class="col-sm-2 col-form-label">Class Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="class" id="qclass" [(ngModel)]="question.class" >
+      <!-- <div class="invalid-feedback" >
+        Please enter a valid URL for the poster.
+      </div> -->
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="qimage" class="col-sm-2 col-form-label">Code Snippit</label>
+    <div class="col-sm-10">
+      <input type="text" required class="form-control" name="image" id="qimage"  [(ngModel)]="question.image" #image="ngModel">
+      <!-- <div class="invalid-feedback" [hidden]="type.valid || type.pristine">
+        Please enter an isbn
+      </div> -->
+    </div>
+  </div>
+  
+
+
+  <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label"></label>
+      <div class="col-sm-10">
+        <button type="submit" (click)="onCreate(question)" class="btn btn-primary" >Submit</button>&nbsp;
+        <button class="btn btn-secondary" routerLink="/home">Cancel</button>
+      </div>
+    </div>
+</form>
