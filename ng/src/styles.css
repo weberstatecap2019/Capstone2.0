@@ -44,6 +44,16 @@ form .row{
     height: 300px;
 }
 
+.btn-primary{
+    background-color: transparent; 
+    border: #492365 1px solid;
+}
+
+.btn-primary:hover{
+    background-color: #492365; 
+    border: #492365 1px solid;
+    color: white;
+}
 
 .colorBar {
     background-color: #492365;

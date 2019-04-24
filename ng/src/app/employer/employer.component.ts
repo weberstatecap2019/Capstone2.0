@@ -26,7 +26,7 @@ export class EmployerComponent implements OnInit {
   onCreate(job: Job): void {
     this.jobsService.createJob(job).subscribe(res => {
       console.log(job)
-   
+      this.router.navigate(['/home'])
       //this.createJob.emit(job);
     });
   }

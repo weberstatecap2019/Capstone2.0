@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 
 let postForumSchema = new Schema({
   title: String,
-  question: String,
+  questions: String,
   class: String,
   image: String,
 })

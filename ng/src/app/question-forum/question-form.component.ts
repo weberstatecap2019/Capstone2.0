@@ -11,6 +11,7 @@ import { QuestionsService } from '../services/questions.service';
 })
 export class QuestionFormComponent implements OnInit {
   question: PostForum = new PostForum()
+  //job: Job = new Job()
   //@Output() createJob= new EventEmitter<Job>();
   constructor(private questionsService: QuestionsService, 
     private route : ActivatedRoute, 
@@ -22,7 +23,7 @@ export class QuestionFormComponent implements OnInit {
       this.questionsService.getQuestion(bid).subscribe( orig => Object.assign(this.question, orig))
     }
   }
-  onCreate(question: PostForum): void {
+  onSubmit(question: PostForum): void {
     this.questionsService.createQuestion(question).subscribe(res => {
       console.log(question)
       //this.createJob.emit(job);

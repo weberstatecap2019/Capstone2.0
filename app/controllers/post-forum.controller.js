@@ -16,6 +16,7 @@ router.get('/api/post_forums', function (req, res, next) {
 })
 
 router.post('/api/post_forums/create', function (req, res, next) {
+    console.log(req.body)
     new PostForum(req.body).save(err => {
         if (err) {
             res.json({ success: false, message: 'unable to save post' })
